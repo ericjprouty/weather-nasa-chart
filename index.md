@@ -27,8 +27,8 @@
                             label: 'Global Average Temp. in C° from 1880 through 2018',
                             data: data.ys,
                             fill: false,
-                            backgroundColor: 'rgba(0, 165, 100, 0.2)',
-                            borderColor: 'rgba(0, 165, 100, 1)',
+                            backgroundColor: 'rgba(0, 165, 200, 0.2)',
+                            borderColor: 'rgba(0, 165, 200, 1)',
                             borderWidth: 1
                         }
                     ]
