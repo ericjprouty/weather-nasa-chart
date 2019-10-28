@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Since 1880 by NASA</title>
+    <link rel="stylesheet" href="styles.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 </head>
 <body>
-
-    <canvas id="chart" width="800" height="380"></canvas>
+    <h2 id="header-1">Average Annual Earth Temperature</h2> 
+    <canvas id="chart" width="800" height="330"></canvas>
 
     <script>
 
@@ -18,16 +19,16 @@
             const data = await getData();
             const ctx = document.getElementById('chart').getContext('2d');
             const myChart = new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: data.xs,
                     datasets: [
                         {
-                            label: 'Global Average Temperature in C° from 1880-2018',
+                            label: 'Global Average Temp. in C° from 1880 through 2018',
                             data: data.ys,
                             fill: false,
-                            backgroundColor: 'rgba(0, 150, 150, 0.2)',
-                            borderColor: 'rgba(0, 150, 150, 1)',
+                            backgroundColor: 'rgba(0, 165, 100, 0.2)',
+                            borderColor: 'rgba(0, 165, 100, 1)',
                             borderWidth: 1
                         }
                     ]
